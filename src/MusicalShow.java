@@ -10,7 +10,7 @@ public class MusicalShow extends Show{
         this.librettoText = librettoText;
     }
 
-    public String printLibretto() {
-        return librettoText;
+    public void printLibretto() {
+        System.out.println(librettoText);
     }
 }
