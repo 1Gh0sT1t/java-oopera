@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class MusicalShow extends Show{
+public class MusicalShow extends Show {
     String musicAuthor;
     String librettoText;
 

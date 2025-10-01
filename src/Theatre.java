@@ -27,15 +27,24 @@ public class Theatre {
         opera.addActor(actor3);
         ballet.addActor(actor1);
         ballet.addActor(actor2); //добавляем актёров в шоу
+        System.out.println("--------"); //добавил визуальное разделение))) но кажется слишком топорно
 
         show.printActors();
+        show.printDirector();
+        System.out.println("--------");
         opera.printActors();
-        ballet.printActors(); //печатаем список актёров по шоу
+        opera.printDirector();
+        System.out.println("--------");
+        ballet.printActors();//печатаем список актёров по шоу
+        ballet.printDirector();//добавил вывод директоров
+        System.out.println("--------");
 
         show.replaceActor("Иванов", actor2);
         show.printActors(); //заменяем существующего актёра, и печатаем новый список
+        System.out.println("--------");
 
         opera.replaceActor("Твардовский", actor2); //заменяем несуществующего актёра
+        System.out.println("--------");
 
         opera.printLibretto();
         ballet.printLibretto(); //печатаем либрето

@@ -2,10 +2,10 @@ import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Show {
-    String title;
-    int duration;
-    Director director;
-    ArrayList<Actor> listOfActors;
+    protected String title;
+    protected int duration;
+    protected Director director;
+    protected ArrayList<Actor> listOfActors;
 
     public Show(String title, int duration, Director director, ArrayList<Actor> listOfActors) {
         this.title = title;
@@ -35,14 +35,18 @@ public class Show {
     }
 
     public void replaceActor(String surname, Actor newActor) {
-        for (int i=0; i<listOfActors.size(); i++) {
+        for (int i = 0; i < listOfActors.size(); i++) {
             Actor currentActor = listOfActors.get(i);
             if (currentActor.getSurname().equals(surname)) {
                 listOfActors.set(i, newActor);
                 System.out.println("Актёр " + currentActor + " заменён на " + newActor);
-                return;
+                //return; - закоментировал return, что бы мы проходили по всему списку, а не заканчивали на первом совпадении
             }
         }
         System.out.println("Актёр с фамилией " + surname + " не найден.");
+    }
+
+    public void printDirector() {
+        System.out.println("Режиссёр спектакля: " + director);
     }
 }
