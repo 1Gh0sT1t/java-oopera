@@ -20,7 +20,7 @@ public class Show {
         } else {
             System.out.println("Актёры спектакля \"" + title + "\":");
             for (Actor actor : listOfActors) {
-                System.out.println(actor.toString());
+                System.out.println(actor);
             }
         }
     }
